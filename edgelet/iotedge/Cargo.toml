@@ -36,21 +36,21 @@ tokio = { version = "1", features = ["parking_lot", "macros", "process"] }
 toml = "0.7"
 url = "2"
 
-aziot-certd-config = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-identity-client-async = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-identity-common = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-identity-common-http = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-identityd-config = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-keyd-config = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-keys-common = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziot-tpmd-config = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-aziotctl-common = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-cert-renewal = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
-config-common = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
+aziot-certd-config = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-identity-client-async = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-identity-common = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-identity-common-http = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-identityd-config = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-keyd-config = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-keys-common = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziot-tpmd-config = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+aziotctl-common = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+cert-renewal = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
+config-common = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
 docker = { path = "../docker-rs" }
 edgelet-core = { path = "../edgelet-core" }
 edgelet-http = { path = "../edgelet-http" }
 edgelet-settings = { path = "../edgelet-settings", features = ["settings-docker"] }
 edgelet-utils = { path = "../edgelet-utils" }
-http-common = { git = "https://github.com/Azure/iot-identity-service", branch = "release/1.4" }
+http-common = { git = "https://github.com/robinmholt/iot-identity-service", branch = "release/1.4-daikin" }
 support-bundle = { path = "../support-bundle" }
