@@ -69,6 +69,22 @@ case "$PACKAGE_OS" in
         esac
         ;;
 
+    'debian9')
+        # https://github.com/debuerreotype/docker-debian-eol-artifacts/issues/10
+        WORK_DIR=$(mktemp -d)
+        if [[ ! "$WORK_DIR" || ! -d "$WORK_DIR" ]]; then
+          echo "Unable to create temporary directory $WORK_DIR" >&2
+          exit 1
+        fi
+        pushd ${WORK_DIR}
+        echo 'FROM debian/eol:stretch-slim' > Dockerfile
+        echo 'RUN echo "deb http://archive.debian.org/debian/ stretch main contrib non-free\ndeb http://archive.debian.org/debian/ stretch-backports main contrib non-free\ndeb http://archive.debian.org/debian-security/ stretch/updates main contrib non-free" > /etc/apt/sources.list && apt-get update' >> Dockerfile
+        docker build -t debian-stretch-eol-fix -f Dockerfile .
+        popd
+        rm -rf ${WORK_DIR}
+        DOCKER_IMAGE='debian-stretch-eol-fix'
+        ;;
+
     'debian10')
         DOCKER_IMAGE='debian:10-slim'
         ;;
